@@ -15,7 +15,7 @@ function setup() {
   for (let i = 0; i < 100; i++) {
     let x = random(width);
     let y = random(height);
-    let size = random(1, 5);
+    let size = random(1, 3);
     let heartColor = color(255, 192, 203); 
     let heart = new Heart(x, y, size, heartColor);
     hearts.push(heart);
@@ -115,14 +115,14 @@ class Population {
 
   display() {
     let numRows = 20;
-    let numCols = 3;
+    let numCols = 1;
     let phraseWidth = width / numCols;
     let phraseHeight = height / numRows;
 
     let x = 0;
     let y = 0;
 
-    textSize(24);
+    textSize(16);
 
     for (let i = 0; i < this.population.length; i++) {
       let phrase = this.population[i].getPhrase();
