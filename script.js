@@ -6,13 +6,13 @@ let population;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  target = "Will you be my valentine";
+  target = "Will you be my valentine?";
   popmax = 200;
   mutationRate = 0.01;
 
   population = new Population(target, mutationRate, popmax);
 
-  for (let i = 0; i < 70; i++) {
+  for (let i = 0; i < 100; i++) {
     let x = random(width);
     let y = random(height);
     let size = random(1, 3);
