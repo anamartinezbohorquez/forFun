@@ -118,7 +118,7 @@ class Population {
   }
 
   display() {
-    let numRows = 20;
+    let numRows = 12;
     let numCols = 1;
     let phraseWidth = width / numCols;
     let phraseHeight = height / numRows;
@@ -126,7 +126,7 @@ class Population {
     let x = 0;
     let y = 0;
 
-    textSize(20);
+    textSize(16);
 
     for (let i = 0; i < this.population.length; i++) {
       let phrase = this.population[i].getPhrase();
