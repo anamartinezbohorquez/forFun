@@ -104,7 +104,7 @@ class Population {
       this.targetReached = true;
       // Update all phrases to match the target
       for (let i = 0; i < this.population.length; i++) {
-        this.population[i].genes = this.target.split('');
+        this.population[i].genes = this.target.split('')+"?";
       }
     }
 
