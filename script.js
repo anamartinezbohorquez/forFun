@@ -7,8 +7,8 @@ let population;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   target = "will you be my valentine";
-  popmax = 200;
-  mutationRate = 0.01;
+  popmax = 300;
+  mutationRate = 0.005;
 
   population = new Population(target, mutationRate, popmax);
 
@@ -104,7 +104,7 @@ class Population {
       this.targetReached = true;
       // Update all phrases to match the target
       for (let i = 0; i < this.population.length; i++) {
-        this.population[i].genes = this.target.split('')+"?";
+        this.population[i].genes = this.target.split('');
       }
     }
 
