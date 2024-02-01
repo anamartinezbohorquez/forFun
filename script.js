@@ -12,7 +12,7 @@ function setup() {
 
   population = new Population(target, mutationRate, popmax);
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 40; i++) {
     let x = random(width);
     let y = random(height);
     let size = random(1, 3);
