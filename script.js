@@ -16,22 +16,21 @@ function setup() {
     let x = random(width);
     let y = random(height);
     let size = random(1, 5);
-    let heartColor = color(255, 192, 203); // Pink color for hearts
+    let heartColor = color(255, 192, 203); 
     let heart = new Heart(x, y, size, heartColor);
     hearts.push(heart);
   }
 }
 
 function draw() {
-  background(255); // Set background to white
+  background(255); 
 
-  // Display hearts
   for (let i = 0; i < hearts.length; i++) {
     hearts[i].display();
     hearts[i].move();
   }
 
-  // Display genetic algorithm population
+
   population.naturalSelection();
   population.generate();
   population.calcFitness();
@@ -41,7 +40,6 @@ function draw() {
     noLoop();
   }
 
-  // Display genetic algorithm population
   population.display();
 }
 
