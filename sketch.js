@@ -2,7 +2,6 @@ let hearts = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  text('te quiero mucho <3');
   for (let i = 0; i < 100; i++) {
     let x = random(width);
     let y = random(height);
@@ -34,25 +33,14 @@ class Heart {
   display() {
     fill(this.color);
     noStroke();
-    beginShape();
-    vertex(this.x, this.y - this.size / 2);
-    bezierVertex(
-      this.x + this.size / 2,
-      this.y - this.size / 2,
-      this.x + this.size / 2,
-      this.y + this.size / 2,
-      this.x,
-      this.y + this.size
-    );
-    bezierVertex(
-      this.x - this.size / 2,
-      this.y + this.size / 2,
-      this.x - this.size / 2,
-      this.y - this.size / 2,
-      this.x,
-      this.y - this.size / 2
-    );
-    endShape(CLOSE);
+    beginShape(); // Begin the custom shape
+    for (let a = 0; a < TWO_PI; a += 0.01) {
+      let r = 1;
+      let hx = this.x + 16 * pow(sin(a), 3) * this.size; // Scale according to heart size
+      let hy = this.y - (13 * cos(a) - 5 * cos(2 * a) - 2 * cos(3 * a) - cos(4 * a)) * this.size; // Scale according to heart size
+      vertex(hx, hy);
+    }
+    endShape(CLOSE); // End the custom shape
   }
 
   move() {
