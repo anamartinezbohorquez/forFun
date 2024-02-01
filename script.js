@@ -6,7 +6,7 @@ let population;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  target = "Will you be my valentine?";
+  target = "will you be my valentine";
   popmax = 200;
   mutationRate = 0.01;
 
