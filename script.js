@@ -102,6 +102,10 @@ class Population {
     if (worldrecord === 1) {
       this.finished = true;
       this.targetReached = true;
+      // Update all phrases to match the target
+      for (let i = 0; i < this.population.length; i++) {
+        this.population[i].genes = this.target.split('');
+      }
     }
 
     if (this.finished === false) {
