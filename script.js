@@ -12,7 +12,7 @@ function setup() {
 
   population = new Population(target, mutationRate, popmax);
 
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 70; i++) {
     let x = random(width);
     let y = random(height);
     let size = random(1, 3);
@@ -122,7 +122,7 @@ class Population {
     let x = 0;
     let y = 0;
 
-    textSize(16);
+    textSize(20);
 
     for (let i = 0; i < this.population.length; i++) {
       let phrase = this.population[i].getPhrase();
